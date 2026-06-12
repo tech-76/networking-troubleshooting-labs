@@ -1,3 +1,10 @@
+# Network Troubleshooting Flowchart
+
+## Purpose
+
+This flowchart shows a basic IT support and help desk workflow for troubleshooting network connectivity issues.
+
+```mermaid
 flowchart TD
     A["User reports network issue"] --> B["Confirm issue details"]
     B --> C{"One user or multiple users affected?"}
@@ -30,3 +37,45 @@ flowchart TD
 
     E --> W["Check service status or network outage"]
     W --> X["Escalate to network/system admin team"]
+```
+
+## What This Diagram Demonstrates
+
+- Basic network troubleshooting workflow
+- Single-user vs multi-user issue checking
+- DHCP and IP troubleshooting
+- Gateway testing
+- Public connectivity testing
+- DNS troubleshooting
+- Escalation process
+- Help desk documentation workflow
+
+## Common Commands
+
+### Windows Commands
+
+```powershell
+ipconfig /all
+ping 8.8.8.8
+ping google.com
+nslookup google.com
+tracert google.com
+```
+
+### PowerShell Commands
+
+```powershell
+Get-NetIPConfiguration
+Test-Connection 8.8.8.8
+Resolve-DnsName microsoft.com
+```
+
+## Example Use Cases
+
+- User cannot browse the internet
+- User can connect to Wi-Fi but websites do not load
+- DNS issue affecting one workstation
+- Possible DHCP issue
+- Local adapter or cable problem
+- VPN-related connectivity issue
+- Wider network outage requiring escalation
